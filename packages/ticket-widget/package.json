@@ -1,0 +1,64 @@
+{
+  "name": "@kit/ticket-widget",
+  "private": true,
+  "version": "0.1.0",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*"
+      ]
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "lint": "eslint .",
+    "format": "prettier --check \"src/**/*.{mjs,ts,md,json}\"",
+    "typecheck": "tsc --noEmit",
+    "build": "rollup -c ./rollup.config.mjs",
+    "build:production": "rollup -c ./rollup.config.mjs --environment=production",
+    "serve": "npx http-server ./ --cors -p 3333"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/preset-react": "7.24.7",
+    "@babel/preset-typescript": "^7.24.1",
+    "@kit/eslint-config": "workspace:*",
+    "@kit/prettier-config": "workspace:*",
+    "@kit/tsconfig": "workspace:*",
+    "@kit/ui": "workspace:*",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.5",
+    "@rollup/plugin-terser": "latest",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^22.1.0",
+    "@types/react": "^18.3.4",
+    "@types/react-dom": "^18.3.0",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.57.0",
+    "lucide-react": "^0.436.0",
+    "prettier": "^3.3.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "rollup": "^4.9.6",
+    "rollup-plugin-inject-process-env": "latest",
+    "rollup-plugin-polyfill-node": "^0.13.0",
+    "rollup-plugin-postcss": "latest",
+    "rollup-plugin-tsconfig-paths": "^1.5.2",
+    "rollup-plugin-visualizer": "latest",
+    "tailwindcss": "3.4.10",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.5.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@kit/eslint-config/base"
+    ]
+  },
+  "prettier": "@kit/prettier-config"
+}

@@ -1,0 +1,9 @@
+{
+  "extends": "@kit/tsconfig/base.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
+    "types": ["react/experimental"]
+  },
+  "include": ["*.ts", "src"],
+  "exclude": ["node_modules"]
+}
